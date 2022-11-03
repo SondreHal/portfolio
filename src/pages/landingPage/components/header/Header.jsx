@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import CTA from './components/CTA';
 import letterArray from './components/letterArray';
+import ThemeToggle from './components/ThemeToggle';
 import * as style from './style';
 
 const Header = () => {
@@ -33,6 +34,11 @@ const Header = () => {
 		<>
 			<style.Main id='home'>
 				<div className='container'>
+					<style.ThemeContainer>
+						<ThemeToggle />
+						<CTA />
+					</style.ThemeContainer>
+
 					<h5>
 						{/* Hi, I'm */}
 						Hei, mitt navn er
@@ -59,7 +65,7 @@ const Header = () => {
 						Frontend utvikler student fra Norge
 					</h5>
 
-					<CTA />
+					{/* <CTA /> */}
 
 					<style.MeImg>
 						<img

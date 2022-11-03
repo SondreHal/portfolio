@@ -37,6 +37,7 @@ const tiltShaking = keyframes`
 export const Main = styled.main`
 	/*Box model stuff*/
 	min-height: 100vh;
+
 	padding-top: 7rem;
 
 	@media ${deviceSize.mobile} {
@@ -90,17 +91,65 @@ export const LetterEffect = styled.span`
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 //
+//    LIGHT & DARK THEME TOGGLE BUTTON
+//
+////////////////////////////////////////////////////////////////////////////////////////////
+export const ThemeContainer = styled.div`
+	display: flex;
+	align-items: center;
+	position: absolute;
+	top: 2rem;
+	right: 12rem;
+	gap: 1rem;
+`;
+
+export const ThemeToggleButton = styled.div`
+	/*Positioning stuff*/
+	/* position: fixed; */
+	right: 20rem;
+	top: 2rem;
+
+	& label {
+		/*Display stuff*/
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		/*Miscellaneous*/
+		cursor: pointer;
+
+		& .moon {
+			/*Positioning stuff*/
+			position: relative;
+			/*Box model stuff*/
+			width: 50px;
+			height: 26px;
+			color: var(--color-white);
+			border-radius: 15px;
+			/*Miscellaneous*/
+			padding-inline: 0.3rem;
+		}
+	}
+`;
+
+////////////////////////////////////////////////////////////////////////////////////////////
+//
 //    CTA BUTTONS
 //
 ////////////////////////////////////////////////////////////////////////////////////////////
 export const CTAButtons = styled.div`
 	/*Display stuff*/
-	display: flex;
-	justify-content: center;
+	/* display: flex; */
+	/* position: absolute; */
+	/* justify-content: center; */
 	/*Box model stuff*/
-	margin-top: 2.5rem;
+	top: 2rem;
+	right: 12rem;
 	/*Miscellaneous*/
 	gap: 1.2rem;
+
+	& a {
+		padding: 0.2rem 1rem;
+	}
 `;
 
 ////////////////////////////////////////////////////////////////////////////////////////////

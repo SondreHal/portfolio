@@ -9,18 +9,16 @@ const CTA = () => {
 					href={CV}
 					target='_blank'
 					rel='noreferrer'
-					className='btn'
+					className='btn btn-primary'
 				>
-					{/* Download CV */}
 					Åpne CV
 				</a>
-				<a
+				{/* <a
 					href='#contact'
 					className='btn btn-primary'
 				>
-					{/* Let's Talk */}
 					Kom i kontakt
-				</a>
+				</a> */}
 			</style.CTAButtons>
 		</>
 	);

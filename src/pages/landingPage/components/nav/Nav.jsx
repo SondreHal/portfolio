@@ -1,47 +1,14 @@
-import { useEffect } from 'react';
 import { AiFillHome } from 'react-icons/ai';
-import { BsFillPersonLinesFill, BsFillSunFill, BsFillTelephoneFill } from 'react-icons/bs';
-import { FaMoon } from 'react-icons/fa';
+import { BsFillPersonLinesFill, BsFillTelephoneFill } from 'react-icons/bs';
 import { ImCogs } from 'react-icons/im';
 import { Link } from 'react-scroll';
 import BurgerMenu from './components/BurgerMenu';
-import { load, save } from './components/localStorage/checkBox';
-import { isLight, toggleLocalStorageItem, toggleRootClass } from './components/localStorage/themeColor';
 import Socials from './components/Socials';
 import * as style from './style';
 
 const Navbar = () => {
-	// LOADS LOCAL STORAGE FOR CHECKBOX ON PAGE LOAD
-	useEffect(() => {
-		load();
-	});
-
-	// IF LOCAL STORAGE HAS LIGHT MODE COLOR THEME, SETS COLOR THEME TO LIGHT MODE
-	if (isLight()) {
-		toggleRootClass();
-	}
-
 	return (
 		<>
-			<style.ThemeToggleButton>
-				<input
-					type='checkbox'
-					id='themeToggle'
-					style={{ display: 'none' }}
-					onClick={() => {
-						toggleLocalStorageItem();
-						toggleRootClass();
-						save();
-					}}
-				/>
-				<label for='themeToggle'>
-					<span>
-						<BsFillSunFill className='sun' />
-						<FaMoon className='moon' />
-					</span>
-				</label>
-			</style.ThemeToggleButton>
-
 			<BurgerMenu />
 
 			<Socials />
